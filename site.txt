@@ -1,0 +1,9 @@
+{
+	"id": "testid001",
+	"version": "001",
+	"file" : {
+		"id": "001",
+		"md5": "5555555",
+		"url": "urldddd"
+	}
+}
