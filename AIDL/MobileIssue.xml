@@ -12,7 +12,7 @@
 	<camera>
 		
 		<num>1</num><!--摄像头个数-->
-		<flashlight>T</falshlight><!--是否有闪光灯-->
+		<flashlight>T</flashlight><!--是否有闪光灯-->
 		
 		<!--相机角度校验-->
 		<angle>
