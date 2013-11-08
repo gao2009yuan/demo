@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<device>
+	
+	<!--版本-->
+	<version>001</version>
+	
+	<!--设备标识信息-->
+	<manufacturer>xiaomi</manufacturer>
+	<model>one c1</model>
+	
+	<!--相机信息和相关开关-->
+	<camera>
+		
+		<num>1</num><!--摄像头个数-->
+		<flashlight>T</falshlight><!--是否有闪光灯-->
+		
+		<!--相机角度校验-->
+		<angle>
+			<one>90</one>
+			<two>180</two>
+			<three>90</three>
+			<four>180</four>
+		</angle>
+		
+		<!--其他相机问题机型开关-->
+		<issues>
+			<issue>
+				<name></name>
+				<value></value>
+			</issue>
+			<issue>
+				<name></name>
+				<value></value>
+			</issue>
+		</issues>
+	</camera>
+		
+	
+</device>
