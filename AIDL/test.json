@@ -2,5 +2,11 @@
   "id": "com.kunpeng.cloudtest",
   "version": "20131208.1",
   "dexurl": "https://github.com/harryhappy/demo/raw/master/AIDL/gt_t959dex.jar",
-  "md5": "md5test"
+  "md5": "md5test",
+  "contactdao":"com.tencent.qqpim.sdk.adaptive.dao.contact.SumSung_GT_T959_ContactV2",
+  "groupdao":"com.tencent.qqpim.sdk.adaptive.dao.group.SumSung_GT_T959_GroupDaoV2",
+  "smsdao":"com.tencent.qqpim.sdk.adaptive.dao.sms.SumSung_GT_T959_SMSV2",
+  "calllogdao":"",
+  "utildao":"com.tencent.qqpim.sdk.adaptive.dao.utils.Sumsung_I5508_UtilsDao"
+
 }
