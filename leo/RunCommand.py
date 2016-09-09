@@ -954,8 +954,16 @@ class NewFolderCommand(sublime_plugin.TextCommand):
 
 class UpdateKatPluginCommand(sublime_plugin.TextCommand):
 	def run(self, edit):
-		sublimeUpatePath = u"D:" + delimiter + u"kat" + delimiter + u"update" + delimiter +"cmd.bat"
-		os.system(sublimeUpatePath)
+		self.urls = ["https://raw.githubusercontent.com/harryhappy/demo/master/leo/Context.sublime-menu",
+                     "https://raw.githubusercontent.com/harryhappy/demo/master/leo/Default.sublime-keymap",
+                     "https://raw.githubusercontent.com/harryhappy/demo/master/leo/Main.sublime-menu",
+                     "https://raw.githubusercontent.com/harryhappy/demo/master/leo/RunCommand.py",
+                     "https://raw.githubusercontent.com/harryhappy/demo/master/leo/Side%20Bar.sublime-menu",
+                     "https://raw.githubusercontent.com/harryhappy/demo/master/leo/utest_shell"
+                     ]
+		for url in self.urls:
+			filename = url.split("/")[-1]
+			urllib.urlretrieve(url,os.path.join(r"C:\XTestScriptTools\Data\Packages\kat",filename))
 
 class InstallCommand(sublime_plugin.TextCommand):
 	def run(self, edit):
