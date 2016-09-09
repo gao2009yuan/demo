@@ -1,5 +1,5 @@
 #coding:utf-8
-import sublime, sublime_plugin, os, subprocess, sys, time, threading, re
+import sublime, sublime_plugin, os, subprocess, sys, time, threading, re, urllib
 adbpath = "adb"
 delimiter = '\\'
 tmpFolder = 'KatTmpFolder'
