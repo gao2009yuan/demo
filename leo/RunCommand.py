@@ -124,6 +124,10 @@ class RunLabKatCommand(sublime_plugin.TextCommand):
 		for i in range(0, len(pathlist)):
 			# print adbpath + " push " + pathlist[i] + " /sdcard/kat/"
 			result = subprocess.Popen(adbpath + " push " + pathlist[i] + " /sdcard/kat/", shell = True, stdout = subprocess.PIPE, stderr = subprocess.PIPE)
+			erroutput = result.communicate()
+			if erroutput[1].split(':')[0] == 'error':
+				sublime.error_message(erroutput[1])
+				exit()
 		print "<<< " + adbpath + " shell am instrument -w com.kunpeng.kapalai.kat/com.kunpeng.kat.base.KatInstrumentationTestRunner >>>"
 		isKatInstall = subprocess.Popen(adbpath + " shell am instrument -w com.kunpeng.kapalai.kat/com.kunpeng.kat.base.KatInstrumentationTestRunner", shell = True, stdout = subprocess.PIPE)
 		infooutput_kat, erroutput_kat = isKatInstall.communicate()
@@ -212,6 +216,10 @@ class RunXtestCommand(sublime_plugin.TextCommand):
 		for i in range(0, len(pathlist)):
 			# print adbpath + " push " + pathlist[i] + " /sdcard/kat/"
 			result = subprocess.Popen(adbpath + " push " + pathlist[i] + " /sdcard/kat/", shell = True, stdout = subprocess.PIPE, stderr = subprocess.PIPE)
+			erroutput = result.communicate()
+			if erroutput[1].split(':')[0] == 'error':
+				sublime.error_message(erroutput[1])
+				exit()
 		print "<<< " + adbpath + " shell am instrument -e class com.kunpeng.kat.base.TestMainInstrumentation -w com.tencent.utest.recorder/com.kunpeng.kat.base.KatInstrumentationTestRunner >>>"
 		isKatInstall = subprocess.Popen(adbpath + " shell am instrument -e class com.kunpeng.kat.base.TestMainInstrumentation -w com.tencent.utest.recorder/com.kunpeng.kat.base.KatInstrumentationTestRunner", shell = True, stdout = subprocess.PIPE)
 		infooutput_kat, erroutput_kat = isKatInstall.communicate()
