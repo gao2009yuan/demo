@@ -138,7 +138,7 @@ class RunLabKatCommand(sublime_plugin.TextCommand):
 			pass
 
 	def showlog(self):
-		time.sleep(8)
+		time.sleep(10)
 		lastTimeLogRow = 0 
 		error_lastTimeLogRow = 0
 		begin_time = time.time()
@@ -230,7 +230,7 @@ class RunXtestCommand(sublime_plugin.TextCommand):
 			pass
 
 	def showlog(self):
-		time.sleep(8)
+		time.sleep(10)
 		lastTimeLogRow = 0 
 		error_lastTimeLogRow = 0
 		begin_time = time.time()
