@@ -128,8 +128,8 @@ class RunLabKatCommand(sublime_plugin.TextCommand):
 			if erroutput[1].split(':')[0] == 'error':
 				sublime.error_message(erroutput[1])
 				exit()
-		print "<<< " + adbpath + " shell am instrument -w com.kunpeng.kapalai.kat/com.kunpeng.kat.base.KatInstrumentationTestRunner >>>"
-		isKatInstall = subprocess.Popen(adbpath + " shell am instrument -w com.kunpeng.kapalai.kat/com.kunpeng.kat.base.KatInstrumentationTestRunner", shell = True, stdout = subprocess.PIPE)
+		print "<<< " + adbpath + " shell am instrument -e class com.kunpeng.kat.base.TestMainInstrumentation -w com.kunpeng.kapalai.kat/com.kunpeng.kat.base.KatInstrumentationTestRunner >>>"
+		isKatInstall = subprocess.Popen(adbpath + " shell am instrument -e class com.kunpeng.kat.base.TestMainInstrumentation -w com.kunpeng.kapalai.kat/com.kunpeng.kat.base.KatInstrumentationTestRunner", shell = True, stdout = subprocess.PIPE)
 		infooutput_kat, erroutput_kat = isKatInstall.communicate()
 		# print infooutput_kat
 		if infooutput_kat.find("does not exist") != -1:
